@@ -2,10 +2,14 @@
 {
     public enum LockMode
     {
+        Undefined,
+        NoLock,
         Shared,
         Update,
         IntentShared,
         IntentExclusive,
-        Exclusive
+        Exclusive,
+        SharedIntentExclusive,
+        UpdateIntentExclusive
     }
 }

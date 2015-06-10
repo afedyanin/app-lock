@@ -3,6 +3,7 @@
     using System;
     using System.Configuration;
     using System.Data.SqlClient;
+    using AppLock.Locks;
 
     class Program
     {
@@ -15,14 +16,12 @@
                 Console.WriteLine("Opening connection...");
                 connection.Open();
 
-                var lockService = new SqlLockService(connection);
-                // var res = lockService.GetAppLockMode("myResource", "Session", "public");
-                // var res = lockService.GetAppLock("myResource", "Exclusive", "Transaction", 1000, "public");
-                // var res = lockService.ReleaseAppLock("myResource", "Session", "public");
-
                 using (var txn = connection.BeginTransaction())
                 {
-                    var res = lockService.CanGetAppLock("myResource", "Exclusive", "Transaction", "public");
+                    var service = new SqlAppLockService(txn);
+                    var appLock = new ExclusiveTransactionLock(service, "myResource");
+                    var res = appLock.Acquire(1000);
+
                     Console.WriteLine("App lock Mode result {0}", res);
                     Console.WriteLine("Press Enter to release lock and exit...");
                     Console.Read();
