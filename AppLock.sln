@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppLock", "AppLock\AppLock.csproj", "{A24DB080-9A81-4138-A6BA-1014320007B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppLock.SampleConsole", "AppLock.SampleConsole\AppLock.SampleConsole.csproj", "{6B65A5F5-AA72-4FD8-A579-13E919A90C13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A24DB080-9A81-4138-A6BA-1014320007B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A24DB080-9A81-4138-A6BA-1014320007B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A24DB080-9A81-4138-A6BA-1014320007B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A24DB080-9A81-4138-A6BA-1014320007B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B65A5F5-AA72-4FD8-A579-13E919A90C13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B65A5F5-AA72-4FD8-A579-13E919A90C13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B65A5F5-AA72-4FD8-A579-13E919A90C13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B65A5F5-AA72-4FD8-A579-13E919A90C13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
