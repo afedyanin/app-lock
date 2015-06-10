@@ -58,21 +58,5 @@
 
         }
 */
-
-        public static bool IsValidAsInputParameter(this LockMode mode)
-        {
-            switch (mode)
-            {
-                case LockMode.Exclusive:
-                case LockMode.Shared:
-                case LockMode.IntentShared:
-                case LockMode.IntentExclusive:
-                case LockMode.Update:
-                    return true;
-
-                default:
-                    return false;
-            }
-        }
     }
 }

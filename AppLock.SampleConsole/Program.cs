@@ -3,7 +3,6 @@
     using System;
     using System.Configuration;
     using System.Data.SqlClient;
-    using AppLock.Locks;
 
     class Program
     {
@@ -18,8 +17,7 @@
 
                 using (var txn = connection.BeginTransaction())
                 {
-                    var service = new SqlAppLockService(txn);
-                    var appLock = new ExclusiveTransactionLock(service, "myResource");
+                    var appLock = SqlLock.Create(txn, "myResource");
                     var res = appLock.Acquire(1000);
 
                     Console.WriteLine("App lock Mode result {0}", res);

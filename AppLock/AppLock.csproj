@@ -36,13 +36,13 @@
   <ItemGroup>
     <Compile Include="Enums\EnumHelper.cs" />
     <Compile Include="Enums\AcquireResult.cs" />
-    <Compile Include="Locks\SqlAppLock.cs" />
+    <Compile Include="SqlLock.cs" />
     <Compile Include="Enums\LockMode.cs" />
     <Compile Include="Enums\LockOwner.cs" />
-    <Compile Include="Locks\ExclusiveTransactionLock.cs" />
-    <Compile Include="SqlAppLockService.cs" />
+    <Compile Include="SqlLockService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

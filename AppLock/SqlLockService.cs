@@ -4,18 +4,18 @@
     using System.Data;
     using System.Data.SqlClient;
 
-    public class SqlAppLockService
+    public class SqlLockService
     {
         public SqlConnection Connection { get; set; }
         public SqlTransaction Transaction { get; set; }
 
-        public SqlAppLockService(SqlTransaction transaction)
+        public SqlLockService(SqlTransaction transaction)
         {
             this.Transaction = transaction;
             this.Connection = transaction.Connection;
         }
 
-        public SqlAppLockService(SqlConnection connection)
+        public SqlLockService(SqlConnection connection)
         {
             this.Connection = connection;
         }
