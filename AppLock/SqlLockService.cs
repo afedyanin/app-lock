@@ -14,7 +14,6 @@
             this.Transaction = transaction;
             this.Connection = transaction.Connection;
         }
-
         public SqlLockService(SqlConnection connection)
         {
             this.Connection = connection;
@@ -51,7 +50,6 @@
                 return (int)returnValue.Value;
             }
         }
-
         public virtual int ReleaseAppLock(string resourceName, string owner, string dbPrincipal)
         {
             this.ThrowIfNotValidConnection();
@@ -75,7 +73,6 @@
                 return (int)returnValue.Value;
             }
         }
-
         public virtual string GetAppLockMode(string resourceName, string owner, string dbPrincipal)
         {
             this.ThrowIfNotValidConnection();
@@ -94,7 +91,6 @@
                 return (string)command.ExecuteScalar();
             } 
         }
-
         public virtual int AppLockTest(string resourceName, string mode, string owner, string dbPrincipal)
         {
             this.ThrowIfNotValidConnection();
@@ -122,7 +118,6 @@
                 command.Transaction = this.Transaction;
             }
         }
-
         protected void ThrowIfNotValidConnection()
         {
             if (this.Connection == null)
