@@ -19,6 +19,7 @@
             this.Connection = connection;
         }
 
+        // see http://msdn.microsoft.com/en-us/ms189823
         public virtual int GetAppLock(string resourceName, int timeout, string mode, string owner, string dbPrincipal)
         {
             this.ThrowIfNotValidConnection();
@@ -50,6 +51,8 @@
                 return (int)returnValue.Value;
             }
         }
+
+        // see http://msdn.microsoft.com/en-us/ms178602
         public virtual int ReleaseAppLock(string resourceName, string owner, string dbPrincipal)
         {
             this.ThrowIfNotValidConnection();
@@ -73,6 +76,8 @@
                 return (int)returnValue.Value;
             }
         }
+
+        // see http://msdn.microsoft.com/en-us/ms189749
         public virtual string GetAppLockMode(string resourceName, string owner, string dbPrincipal)
         {
             this.ThrowIfNotValidConnection();
@@ -91,6 +96,8 @@
                 return (string)command.ExecuteScalar();
             } 
         }
+
+        // see http://msdn.microsoft.com/en-us/ms178647
         public virtual int AppLockTest(string resourceName, string mode, string owner, string dbPrincipal)
         {
             this.ThrowIfNotValidConnection();
