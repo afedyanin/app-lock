@@ -31,8 +31,11 @@
                 command.CommandType = CommandType.StoredProcedure;
                 command.CommandText = "dbo.sp_getapplock";
 
-                // TODO: Check command timeout
-                // command.CommandTimeout = timeout > 0 ? 
+                if (timeout > 0)
+                {
+                    // increase timeout for lock waiting
+                    command.CommandTimeout = timeout / 1000 + command.CommandTimeout;
+                }
 
                 command.Parameters.AddWithValue("Resource", resourceName);
                 command.Parameters.AddWithValue("LockMode", mode);

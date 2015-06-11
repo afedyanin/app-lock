@@ -49,14 +49,5 @@
             LockMode res;
             return Enum.TryParse(lockModeString, true, out res) ? res : LockMode.Undefined;
         }
-
-/*
-        public static AcquireResult GetAcquireResult(int resultCode)
-        {
-            AcquireResult res;
-            return Enum.TryParse(resultCode, out res) ? 
-
-        }
-*/
     }
 }

@@ -35,7 +35,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\EnumHelper.cs" />
-    <Compile Include="Enums\AcquireResult.cs" />
     <Compile Include="SqlLock.cs" />
     <Compile Include="Enums\LockMode.cs" />
     <Compile Include="Enums\LockOwner.cs" />
