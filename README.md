@@ -42,4 +42,4 @@ Sample:
 
 More info: [http://msdn.microsoft.com/en-us/ms189823](http://msdn.microsoft.com/en-us/ms189823)
 
-AppLock is available for download as a NuGet package.
+AppLock is available for download as a [NuGet package](http://www.nuget.org/packages/AppLock).
