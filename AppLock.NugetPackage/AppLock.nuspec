@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>AppLock</id>
+    <title>Distributed Application Lock</title>
+    <version>1.0.0</version>
+    <authors>Afedyanin</authors>
+    <owners>Afedyanin</owners>
+    <description>AppLock is a lightweight .NET library that makes it easy to set up and use fully distributed locks.</description>
+    <copyright>Copyright 2015</copyright>
+    <language>en-US</language>
+    <projectUrl>https://github.com/afedyanin/app-lock</projectUrl>
+    <tags>sql lock distributed</tags>
+  </metadata>
+  <files>
+    <file src="bin\AppLock.dll" target="lib\net45" />
+  </files>
+</package>

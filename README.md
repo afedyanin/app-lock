@@ -5,6 +5,7 @@ There is the set of the tasks when you need to serialize access to some code. As
 
 SQL Server provides an application manageable lock mechanism through the sp\_getapplock / sp\_releaseapplock pair of system stored procedures. They provide a way for application code to use SQL's underlying locking mechanism, without having to lock database rows. The lock can be tied to a transaction or session ensuring lock release when the transaction COMMITs or ROLLSBACK or when the session exits and the connection is closed.
 
+AppLock is a lightweight .NET library that makes it easy to set up and use fully distributed locks.
 
 Sample:
 
@@ -40,3 +41,5 @@ Sample:
 
 
 More info: [http://msdn.microsoft.com/en-us/ms189823](http://msdn.microsoft.com/en-us/ms189823)
+
+AppLock is available for download as a NuGet package.
